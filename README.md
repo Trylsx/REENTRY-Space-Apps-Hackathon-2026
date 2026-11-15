@@ -85,16 +85,49 @@ This is a planning aid, not flight software.
 
 ### 1. Backend
 
-The scikit-learn version must match the one used to save the model, so install from the requirements file.
+The scikit-learn version must match the one used to save the model, so install from the requirements file. Run each command on its own, one at a time, and wait for it to finish before running the next.
+
+Move into the backend folder:
 
 ```bash
 cd backend
-python -m venv .venvsource .venv/bin/activate
+```
+
+Create the virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+Activate it. On Windows (PowerShell or the VS Code terminal):
+
+```bash
+.venv\Scripts\activate
+```
+
+On Mac or Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+Your prompt should now start with `(.venv)`. Install the dependencies:
+
+```bash
 pip install -r requirements.txt
+```
+
+Start the API:
+
+```bash
 uvicorn app.main:app --port 8000
 ```
 
-On Windows, activate the environment with `.venv\Scripts\activate`.
+If PowerShell blocks activation with a script-execution error, run this once and try again:
+
+```bash
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+```
 
 ### 2. Frontend
 
@@ -116,9 +149,13 @@ Open the local address Vite prints. It proxies `/api` to `http://127.0.0.1:8000`
 
 ### Tests
 
+With the backend environment active, from the `backend` folder:
+
 ```bash
-cd backend
 pip install -r requirements-dev.txt
+```
+
+```bash
 pytest
 ```
 
