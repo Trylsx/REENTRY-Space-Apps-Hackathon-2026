@@ -110,10 +110,10 @@ Open the local address Vite prints. It proxies `/api` to `http://127.0.0.1:8000`
 
 ### 3. Try it
 
-1. Click **Start** on the intro screen, or load the Gale Crater preset.
-2. Use **Waypoint** mode to add stops and **Hazard** mode to draw no-go zones.
+1. Click **Launch Mission Console** on the intro screen, or **Load Gale Crater Traverse** for the preset.
+2. Use **+ Waypoint** to add stops and **Hazard Area** to draw no-go zones.
 3. Read the Traverse Clearance Assessment, then open the 3D route view.
-4. Switch to **Analyse** mode and click the map to get the AI forecast.
+4. Switch to **Analyse** and click the map to get the AI forecast.
 
 ### Tests
 
