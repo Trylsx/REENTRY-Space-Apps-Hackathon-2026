@@ -89,8 +89,7 @@ The scikit-learn version must match the one used to save the model, so install f
 
 ```bash
 cd backend
-python -m venv .venv
-source .venv/bin/activate
+python -m venv .venvsource .venv/bin/activate
 pip install -r requirements.txt
 uvicorn app.main:app --port 8000
 ```
